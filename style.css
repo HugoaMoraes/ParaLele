@@ -1,12 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
+:root {
+  --Primaria: #d13a3a;
+  --Secundaria: #811c1c;
+  --Background: #ffcdcd;
+  --fullbranco: #f3f3f3;
+  --Letras: #003049;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #ffcdcd;
+  background-color: var(--Background);
   overflow:hidden;
 }
 
@@ -35,11 +43,11 @@ body {
   position: relative;
   width: 300px;
   height: 200px;
-  background-color: #e72b2b;
+  background-color: var(--Primaria);
 }
 
 .envelope:before {
-  background-color: #811c1c;
+  background-color: var(--Secundaria);
   content: "";
   position: absolute;
   width: 212px;
@@ -52,7 +60,7 @@ body {
 
 .card {
   position: absolute;
-  background-color: #f3f3f3;
+  background-color: var(--fullbranco);
   width: 270px;
   height: 170px;
   top: 5px;
@@ -63,7 +71,7 @@ body {
 .card:before {
   content: "";
   position: absolute;
-  border: 3px solid #d21616;
+  border: 3px solid var(--Primaria);
   border-style: groove;
   width: 240px;
   height: 140px;
@@ -78,11 +86,11 @@ body {
   text-align: center;
   line-height: 25px;
   top: 30px;
-  color: #003049;
+  color: var(--Letras);
 }
 
 .heart {
-  background-color: #d62828;
+  background-color: var(--Primaria);
   display: inline-block;
   height: 30px;
   margin: 0 10px;
@@ -96,7 +104,7 @@ body {
 .heart:before,
 .heart:after {
   content: "";
-  background-color: #d62828;
+  background-color: var(--Primaria);
   border-radius: 50%;
   height: 30px;
   position: absolute;
@@ -122,7 +130,7 @@ body {
 .three,
 .four,
 .five {
-  background-color: red;
+  background-color: var(--Primaria);
   display: inline-block;
   height: 10px;
   margin: 0 10px;
@@ -143,7 +151,7 @@ body {
 .five:before,
 .five:after {
   content: "";
-  background-color: red;
+  background-color: var(--Primaria);
   border-radius: 50%;
   height: 10px;
   position: absolute;
@@ -267,7 +275,7 @@ body {
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 600px;
-  background-color: white;
+  background-color: var(--fullbranco);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   border-radius: 8px;
@@ -287,8 +295,8 @@ body {
 }
 
 .modal-header {
-  background-color: #b12323;
-  color: white;
+  background-color: var(--Secundaria);
+  color: var(--fullbranco);
   padding: 10px;
   text-align: center;
   font-family: "Caveat", cursive;
@@ -302,12 +310,12 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 21px;
-  color: #003049;
+  color: var(--Letras);
   height: 100%;
 }
 
 .modal-footer {
-  color: white;
+  color:var (--fullbranco);
   padding: 10px;
   text-align: center;
   margin: 0px;
@@ -315,20 +323,20 @@ body {
 
 .open-modal-btn {
   padding: 10px 20px;
-  color: #d21616;
+  color: var(--Primaria);
   border: none;
-  color: white;
+  color: var(--fullbranco);
   border-radius: 5px;
   cursor: pointer;
 }
 
 .close-modal-btn {
   padding: 5px 10px;
-  background-color: #d21616;
-  color: white;
+  background-color: var(--Primaria);
+  color: var(--fullbranco);
   border-radius: 5px;
   cursor: pointer;
-  border-color: #811c1c;
+  border-color: var(--Secundaria);
 }
 
 .modal-overlay {
